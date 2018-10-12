@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "">
+<head>
+    <title>angularBasics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+</head>
+<body>
+    <input type="text" ng-model = "name">
+    <div ng-bind = "name"></div>
+    <div ng-init = "language = 'angularjs'">
+        Your preferred language: <input type="text" ng-model = "language"> {{language}}
+    </div>
+    
+</body>
+</html>

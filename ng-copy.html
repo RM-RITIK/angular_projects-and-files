@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <title>ng-copy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+</head>
+<body>
+    <div ng-init = "myFavouriteLan = [{name: 'php' , extension: '.php'}, {name: 'javascript', extension: '.js'}, {name: 'c++', extension:'.cpp'}]">
+        <p ng-repeat = "language in myFavouriteLan">
+            Name: {{language.name}}<br>
+            Extension: {{language.extension}}
+
+        </p>
+    </div>
+    
+</body>
+</html>
