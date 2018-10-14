@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>$http_service | AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+    <script src = "node_modules\angular-route\angular-route.min.js"></script>
+    <script src="controller_http.js"></script>
+</head>
+<body ng-app = "mainApp">
+    <div ng-controller = "people">
+        <ul>
+            <h2>Names and Age of the Programmers in local area:</h2>
+            <li ng-repeat = "person in presons">
+                {{person.Name + ':' + person.Age }}
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -6,9 +6,9 @@
 </head>
 <body>
     <div ng-init = "myFavouriteLan = [{name: 'php' , extension: '.php'}, {name: 'javascript', extension: '.js'}, {name: 'c++', extension:'.cpp'}]">
-        <p ng-repeat = "language in myFavouriteLan">
-            Name: {{language.name}}<br>
-            Extension: {{language.extension}}
+        <p ng-repeat = "i in myFavouriteLan">
+            Name: {{i.name}}<br>
+            Extension: {{i.extension}}
 
         </p>
     </div>
