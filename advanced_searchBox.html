@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>advancedSearchBox</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+    <script src = "node_modules\angular-route\angular-route.min.js"></script>
+    <script src="controller_search.js"></script>
+</head>
+<body ng-app = "mainApp">
+    <div ng-controller = "people">
+        <h2>My Siblings:</h2>
+        <ul>
+            <li ng-repeat = "person in persons | filter:globalSearch">
+                {{"Name: " + person.Name + ","+ "   Age: " + person.Age +","+ "   Profession: " + person.Profession}}
+                
+            </li>
+        </ul>
+    </div> 
+    <div  id="searchBoxes">
+        Global Search Filter: <input type="text" ng-model = "globalSearch.$"> <br>
+        Nmae Filter: <input type="text" ng-model = "globalSearch.Name"><br>
+        Age Filter: <input type="text" ng-model = "globalSearch.Age"><br>
+        Profession Filter: <input type="text" ng-model = "globalSearch.Profession">
+    </div>
+    
+</body>
+</html>
