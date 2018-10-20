@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ng-show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+    <script src = "node_modules\angular-route\angular-route.min.js"></script>
+    <script src="cont_ng-show.js"></script>
+</head>
+<body ng-app = "mainApp" ng-controller = "app">
+    <button ng-click = "toggle()">Toggle Message</button>
+    <div class="message" ng-show = "show == 'msg1'">this is message 1.</div>
+    <div class="message" ng-show = "show == 'msg2'">this is message 2.</div>
+    
+</body>
+</html>
