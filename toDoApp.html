@@ -39,7 +39,7 @@
         <ul>
             <li ng-repeat = "oneTask in tasks">
                 <input type="checkbox" ng-model = "oneTask.status">
-                <span class="done-{{oneTask.status}}" ng-model = "oneTask.textMeassage" ng-dblclick = "contentEdit()" contenteditable="false">
+                <span class="done-{{oneTask.status}}" ng-model = "oneTask.textMeassage" ng-dblclick = "contentEdit()" contenteditable="false" ng-keydown = "enterAgain(oneTask.taskMessage)">
                    {{oneTask.taskMessage}}
                 </span>
             </li>

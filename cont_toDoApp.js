@@ -23,5 +23,11 @@ application.controller('app', function($scope) {
     }
     console.log(event.target.contentEditable);
         
+    };
+    $scope.enterAgain = function(msg) {
+        if(event.which == 13 && msg != "") {
+            event.target.contentEditable = "false";
+        }
+
     }
 })
