@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+    <script src = "node_modules\angular-route\angular-route.min.js"></script>
+    <script src="cont_toDoApp.js"></script>
+    <style type="text/css">
+    #buttonContainer {
+        width: 300px;
+        margin: 0px auto;
+        
+    }
+    #textbox {
+        padding: 5px;
+        font-size: 15px;
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+    }
+    .done-true {
+        color: grey;
+        font-style: italic;
+        text-decoration: line-through;
+    }
+    span[contenteditable = "true"] {
+        background: grey;
+        padding: 3px;
+    }
+    </style>
+</head>
+<body ng-app = "mainApp" ng-controller = "app">
+    <h1>Add a Task</h1>
+    <div id = "buttonContainer">
+        <input ng-keyup = "searchEnter()" ng-model = "task" type="text" id="textbox">
+    </div>
+    <div id = "taskToShow">
+        <ul>
+            <li ng-repeat = "oneTask in tasks">
+                <input type="checkbox" ng-model = "oneTask.status">
+                <span class="done-{{oneTask.status}}" ng-model = "oneTask.textMeassage" ng-dblclick = "contentEdit()" contenteditable="false">
+                   {{oneTask.taskMessage}}
+                </span>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
