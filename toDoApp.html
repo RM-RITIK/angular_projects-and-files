@@ -19,7 +19,7 @@
     h1 {
         text-align: center;
     }
-    .done-true {
+    span.done-true {
         color: grey;
         font-style: italic;
         text-decoration: line-through;
@@ -37,9 +37,9 @@
     </div>
     <div id = "taskToShow">
         <ul>
-            <li ng-repeat = "oneTask in tasks">
+            <li ng-repeat = "oneTask in tasks track by $index">
                 <input type="checkbox" ng-model = "oneTask.status">
-                <span class="done-{{oneTask.status}}" ng-model = "oneTask.textMeassage" ng-dblclick = "contentEdit()" contenteditable="false" ng-keydown = "enterAgain(oneTask.taskMessage)">
+                <span class="done-{{oneTask.status}}" ng-model = "oneTask.textMeassage" ng-dblclick = "contentEdit(oneTask.taskMessage)" contenteditable="false" ng-keydown = "enterAgain(oneTask.taskMessage)">
                    {{oneTask.taskMessage}}
                 </span>
             </li>
