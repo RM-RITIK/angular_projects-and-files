@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Isolated Scope Properties</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"> </script>
+    <script src = "node_modules\angular-route\angular-route.min.js"></script>
+    <script src="isolatedScopeProperties.js"></script>
+</head>
+<body ng-app = "mainApp" ng-controller = "app">
+    <p>First Variable 'name' : {{name}}</p>
+    <p>Second Variable 'age' : {{age}}</p>
+    <input type="button" ng-click = "alertTheName()">
+    <p>--------------DIRECTIVES---------------</p>
+
+    <div my-first-script name = "{{name}}" age = "age" fun = "alertTheName()" ></div>
+    
+</body>
+</html>
